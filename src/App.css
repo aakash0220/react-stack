@@ -1,0 +1,276 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  min-height: 200dvh;
+  /* overflow: auto; */
+  background-color: rgb(228, 248, 252);
+  position: relative;
+}
+
+p{
+  font-size: 1.2rem;
+  font-weight: 490;
+}
+/*----------------------NAV-------------------*/
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(198, 219, 252);
+  padding: 10px 30px;
+  /* border: 2px solid red; */
+}
+.navbar p{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(9, 100, 220);
+  text-align: center;
+  /* padding: 5px 10px; */
+  /* border: 2px solid black; */
+}
+nav{
+  /* width: 800px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+  column-gap: 40px;
+  /* border: 2px solid black; */
+}
+a{
+  /* border: 2px solid red; */
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+nav a:hover{
+  border-bottom: 3px solid rgb(50, 48, 48);
+}
+
+/*---------------------STACK-------------------------*/
+.main{
+  padding: 100px 15px;
+  /* border: 2px solid black; */
+  background-color: rgb(222, 239, 253);
+}
+.project{
+  display: flex;
+  justify-content: space-between;
+}
+.project p{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.stack-elements{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 310px;
+  padding: 5px;
+  /* border: 1px solid hsl(240, 100%, 94%); */
+  border-radius: 5px;
+  background-color: hsl(202, 100%, 89%);
+  margin: 5px;
+}
+.element{
+  width: 110px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid black; */
+  border-radius: 5px;
+  background-color: rgb(154, 181, 255);
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: 525;
+}
+button{
+  border: 0px;
+}
+.side2{
+  align-self: flex-end;
+}
+
+.display-stack{
+  /* height: 500px; */
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: end;
+
+  border: 2px solid black;
+  border-top: 0px;
+}
+.display-element{
+  background-color: rgb(245, 216, 180);
+  justify-self: flex-end;
+}
+.pop{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  
+}
+
+/*-----------------------------------------------*/
+
+
+/*----------------------THEORY-------------------*/
+.theory-body{
+  padding: 100px 30px;
+  background-color: aliceblue;
+}
+.ds{
+  display: inline-block;
+  color: white;
+  font-weight: 550;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(166, 61, 247);
+  margin-right: 5px;
+}
+/*----------------------WELCOME-------------------*/
+.welcome-body{
+  padding: 100px 30px;
+}
+/*----------------------PROJECT_DESC------------------*/
+
+.about-project{
+  padding: 100px 30px;
+}
+/*-------------------------HIDE_ELE/SHOW_ELE------------------*/
+.hide-ele{
+  display: none;
+}
+.show-Ele{
+  display: flex;
+}
+
+/*------------------------MEDIA_QUERIES--------------------*/
+@media (width < 500px) {
+  .navbar p{
+    font-size: 1.5rem;
+  }
+}
+
+.menu-btn-desktop{
+  display: none;
+}
+
+@media (width < 850px) {
+  .nav-mobile-close{
+    display: none;
+  }
+  .nav-mobile-click{
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    top: 60px;
+    right: 20px;
+    row-gap: 5px;
+  }
+  .nav-mobile-click a:hover{
+    background-color: rgb(217, 225, 232);
+  }
+  .close-btn-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+  height: 32px;
+  background-image: url(./Components/icons8-cross-32.png);
+  }
+
+  .menu-btn-mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+  height: 32px;
+  background-image: url(./Components/icons8-menu-32.png);
+  }
+  .menu-btn-mobile:hover{
+    cursor: pointer;
+  }
+}
+@media (width < 430px) {
+  .element{
+    width: auto;
+  }
+  .stack-elements .element{
+    width: 50px;
+  }
+  .display-stack .element{
+    width: 50px;
+  }
+  .project p{
+    font-size: 1rem;
+  }
+  .side2{
+    justify-self: end;
+    align-self: end;
+    flex-grow: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
